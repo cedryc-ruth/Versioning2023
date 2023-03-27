@@ -14,6 +14,10 @@ public class Person {
 	}
 
 	public void setFirstname(String firstname) {
+		if(firstname.trim().length()==0) {
+			throw new RuntimeException("Le prénom ne peut être vide!");
+		}
+		
 		this.firstname = firstname;
 	}
 
@@ -22,6 +26,10 @@ public class Person {
 	}
 
 	public void setLastname(String lastname) {
+		if(lastname.trim().length()==0) {
+			throw new RuntimeException("Le nom ne peut être vide!");
+		}
+		
 		this.lastname = lastname;
 	}
 
